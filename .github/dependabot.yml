@@ -6,6 +6,10 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    groups:
+      go-minor-patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
 
   # Maintain Android module Gradle dependencies
   - package-ecosystem: "gradle"
@@ -13,6 +17,10 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    groups:
+      gradle-minor-patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
 
   # Maintain GitHub Actions versions
   - package-ecosystem: "github-actions"
@@ -20,3 +28,7 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 5
+    groups:
+      actions-minor-patch:
+        applies-to: version-updates
+        update-types: ["minor", "patch"]
